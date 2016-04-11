@@ -468,6 +468,13 @@ table {
       background: #58ff87;
     }
 
+    &.purple {
+      background: $budget;
+
+      p {
+        color: white;
+      }
+    }
   }
 
   .big-number {
@@ -655,6 +662,18 @@ table.age-groups {
   }
 }
 
+table.age-groups-investment-projects {
+
+  .progress {
+    background: #F8EFF3;
+    height: $line-height/2;
+  }
+
+  .progress-meter {
+    background: #E83E88;
+  }
+}
+
 // 08. Spending proposals
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -663,6 +682,17 @@ table.age-groups {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
+
+  &.results {
+
+    h1 {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      color: white;
+    }
+  }
 
   h1 {
     color: white;
