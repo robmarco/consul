@@ -395,7 +395,7 @@ feature 'Proposals' do
     end
   end
 
-  context "Geozones" do
+  context 'Geozones' do
 
     scenario "Default whole city" do
       author = create(:user)
@@ -448,6 +448,44 @@ feature 'Proposals' do
       end
     end
 
+  end
+
+  context 'Retire a proposal' do
+    scenario 'Retire' do
+      proposal = create(:proposal)
+      login_as(proposal.author)
+
+      visit user_path(proposal.author)
+      within("#proposal_#{proposal.id}") do
+        click_link 'Retire'
+      end
+      expect(current_path).to eq(retire_form_proposal_path(proposal))
+
+      select 'Duplicated', from: 'proposal_retired_reason'
+      fill_in 'proposal_retired_explanation', with: 'There are three other better proposals with the same subject'
+      click_button "Retire proposal"
+
+      expect(page).to have_content "Proposal retired"
+
+      visit proposal_path(proposal)
+
+      expect(page).to have_content proposal.title
+      expect(page).to have_content 'Proposal retired by the author'
+      expect(page).to have_content 'Duplicated'
+      expect(page).to have_content 'There are three other better proposals with the same subject'
+    end
+
+    scenario 'Fields are mandatory' do
+      proposal = create(:proposal)
+      login_as(proposal.author)
+
+      visit retire_form_proposal_path(proposal)
+
+      click_button 'Retire proposal'
+
+      expect(page).to_not have_content 'Proposal retired'
+      expect(page).to have_content "can't be blank", count: 2
+    end
   end
 
   scenario 'Update should not be posible if logged user is not the author' do
