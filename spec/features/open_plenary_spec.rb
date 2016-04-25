@@ -92,6 +92,8 @@ feature 'Open Plenary' do
 
       visit "processes_open_plenary"
 
+      click_link "See the most voted proposals and questions"
+
       click_link "See all proposals"
 
       within("#proposals") do
@@ -124,6 +126,7 @@ feature 'Open Plenary' do
       create(:proposal, title: "Plant more trees",  tag_list: 'plenoabierto')
 
       visit "processes_open_plenary"
+      click_link "See the most voted proposals and questions"
       click_link "See all proposals"
 
       within("#proposals") do
@@ -139,6 +142,7 @@ feature 'Open Plenary' do
     proposal2 = create(:proposal, title: "After start date",   tag_list: 'plenoabierto', created_at: Date.parse('18-04-2016'))
 
     visit "processes_open_plenary"
+    click_link "See the most voted proposals and questions"
     click_link "See all proposals"
 
     within("#proposals") do
@@ -168,6 +172,7 @@ feature 'Open Plenary' do
       proposal4 = create(:proposal, title: "After start date",        tag_list: 'plenoabierto', created_at: Date.parse('22-04-2016'))
 
       visit "processes_open_plenary"
+      click_link "See the most voted proposals and questions"
       click_link "See all proposals"
 
       within("#proposals") do
