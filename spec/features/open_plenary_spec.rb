@@ -53,6 +53,8 @@ feature 'Open Plenary' do
     login_as(author)
     visit "processes_open_plenary"
 
+    click_link "See the most voted proposals and questions"
+
     click_link "See all questions"
 
     within("#comments") do
@@ -69,6 +71,8 @@ feature 'Open Plenary' do
       proposal3 = create(:proposal, title: "Take care of the rich")
 
       visit "processes_open_plenary"
+
+      click_link "See the most voted proposals and questions"
 
       click_link "See all proposals"
 
