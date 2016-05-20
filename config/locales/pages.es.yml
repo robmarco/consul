@@ -13,6 +13,7 @@ es:
         Todos juntos conseguiremos que cualquier país pueda disfrutar de esta herramienta. ¡Un millón de gracias!
     more_information:
       description:
+        debt_audit: Auditoría Ciudadana Municipal de Deuda y Políticas Públicas del Ayuntamiento de Madrid
         faq: Preguntas frecuentes sobre problemas técnicos
         how_it_works: Descubre todo lo que puedes hacer en esta web
         how_to_use: Utilízalo libremente o ayúdanos a mejorarlo, es software libre
@@ -58,6 +59,7 @@ es:
 
           Si eres programador, puedes ver el código y ayudarnos a mejorarlo en [aplicación Consul](https://github.com/ayuntamientomadrid 'github consul' ).
       titles:
+        debt_audit: Auditoría de la deuda
         faq: Soluciones a problemas técnicos (FAQ)
         how_it_works: "¿Cómo funciona este Portal de Gobierno Abierto?"
         how_to_use: Utilízalo en tu municipio
