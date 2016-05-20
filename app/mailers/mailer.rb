@@ -42,8 +42,8 @@ class Mailer < ApplicationMailer
     end
   end
 
-  def debt_audit_document(attachment_tmp_path)
-    attachments['attachment'] = File.read(attachment_tmp_path)
+  def debt_audit_document(path, filename)
+    attachments[filename] = File.read(path)
     mail(from: "anonymous@example.com", to: ["voodoorai2000@gmail.com", "aranacm@madrid.es"], subject: 'Debt audit file uploaded')
   end
 
