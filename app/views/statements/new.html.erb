@@ -1,0 +1,4 @@
+<%= form_for [@audit, @statement] do |f| %>
+   <%= f.file_field(:attachment) %>
+   <%= f.submit 'Enviar' %>
+<% end %>

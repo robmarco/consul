@@ -1,4 +1,11 @@
 FactoryGirl.define do
+  factory :statement do
+    audit_id 1
+    filename "MyString"
+  end
+  factory :audit do
+    name "MyString"
+  end
   sequence(:document_number) { |n| "#{n.to_s.rjust(8, '0')}X" }
 
   factory :user do
