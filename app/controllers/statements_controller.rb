@@ -27,11 +27,15 @@ class StatementsController < ApplicationController
     end
 
     def path
-      File.absolute_path(params[:statement][:attachment].tempfile)
+      if statement_params[:attachment].present?
+        File.absolute_path(params[:statement][:attachment].tempfile)
+      end
     end
 
     def filename
-      params[:statement][:attachment].original_filename
+      if statement_params[:attachment].present?
+        params[:statement][:attachment].original_filename
+      end
     end
 
     def title

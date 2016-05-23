@@ -44,7 +44,7 @@ class Mailer < ApplicationMailer
 
   def debt_audit_document(path, filename, title, body)
     @body = body
-    attachments[filename] = File.read(path)
+    attachments[filename] = File.read(path) if filename.present?
     mail(from: "anonymous@example.com", to: ["voodoorai2000@gmail.com"], subject: "Auditoría Ciudadana - #{title}")
   end
 
