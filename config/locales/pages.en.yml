@@ -13,7 +13,7 @@ en:
         Together we can make this open government tool available to any country. Thanks a million!
     more_information:
       description:
-        debt_audit: Auditoría Ciudadana Municipal de Deuda y Políticas Públicas del Ayuntamiento de Madrid
+        citizen_audit: Auditoría Ciudadana Municipal de Deuda y Políticas Públicas del Ayuntamiento de Madrid
         faq: Frecuently asked question about tecnical problems
         how_it_works: Find out all you can do with this web site
         how_to_use: Use it freely or help us to improve it, it is free software
@@ -59,7 +59,7 @@ en:
 
           If you are a programmer, you can see the code and help us to improve it at [Consul app](https://github.com/ayuntamientomadrid 'consul github ' ).
       titles:
-          debt_audit: Auditoría de la deuda
+          citizen_audit: Citizen Audit
           faq: Solution to tecnical problemas (FAQ)
           how_it_works: How does this Open Government Portal work?
           how_to_use: Use it in your local government

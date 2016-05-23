@@ -1552,7 +1552,7 @@ ul.ballot-list {
 // 12. Audit debt
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-.audit-debt {
+.audit {
 
   h3 {
     color: #4d525b;
@@ -1567,7 +1567,7 @@ ul.ballot-list {
   }
 }
 
-.jumbo-audit-debt {
+.jumbo-audit {
   background: #c7ad8e image-url('audit_debt_bg.jpg') no-repeat;
   background-position: 50%;
   background-size: cover;
@@ -1584,7 +1584,7 @@ ul.ballot-list {
     margin: 0;
 
     @include breakpoint(medium) {
-      font-size: rem-calc(63);
+      font-size: rem-calc(66);
       line-height: rem-calc(60);
     }
   }
