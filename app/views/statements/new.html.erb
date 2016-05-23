@@ -1,12 +1,6 @@
 <%= form_for [Audit.first, Statement.new] do |f| %>
-  <label>Título</label>
-  <input type="text" placeholder="Título">
-  <label>Mensaje</label>
-  <textarea rows="4"></textarea>
+  <%= f.text_field :title, label: "Título", placeholder: "Título" %>
+  <%= f.text_area :body, rows: 4, label: "Mensaje", placeholder: "Mensaje" %>
   <%= f.file_field(:attachment) %>
   <input type="submit" value="Enviar documento" class="button expanded">
 <% end %>
-
-
-
-

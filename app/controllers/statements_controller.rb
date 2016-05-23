@@ -9,11 +9,9 @@ class StatementsController < ApplicationController
 
   def create
     @audit = Audit.find(params[:audit_id])
-    filename = params[:statement][:attachment].original_filename
-    @statement = @statement = @audit.statements.new(filename: filename)
+    @statement = @audit.statements.new(statement_params)
     if @statement.save
-      path = File.absolute_path(params[:statement][:attachment].tempfile)
-      Mailer.debt_audit_document(path, filename).deliver_later
+      Mailer.debt_audit_document(path, filename, title, body).deliver_later
       redirect_to [@audit, @statement], notice: "Muchas gracias. Hemos recibido tu documento."
     end
   end
@@ -21,5 +19,27 @@ class StatementsController < ApplicationController
   def show
     @statement = Statement.find(params[:id])
   end
+
+  private
+
+    def statement_params
+      params.require(:statement).permit(:title, :body, :attachment)
+    end
+
+    def path
+      File.absolute_path(params[:statement][:attachment].tempfile)
+    end
+
+    def filename
+      params[:statement][:attachment].original_filename
+    end
+
+    def title
+      statement_params[:title]
+    end
+
+    def body
+      statement_params[:body]
+    end
 
 end
