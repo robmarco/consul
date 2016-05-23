@@ -101,15 +101,7 @@
     <div id="send_document" class="row margin-top">
       <div class="small-12 medium-6 small-centered column">
         <h2>Enviar documento</h2>
-
-        <form>
-          <label>Título</label>
-          <input type="text" placeholder="Título">
-          <label>Mensaje</label>
-          <textarea rows="4"></textarea>
-          <input type="file" name="attachment" id="attachment" >
-          <input type="submit" value="Enviar documento" class="button expanded">
-        </form>
+        <%= render template: 'statements/new' %>
       </div>
     </div>
   </div>
