@@ -47,7 +47,7 @@ class Mailer < ApplicationMailer
     @title = title
     @filename = filename
     attachments[filename] = File.read(path) if filename.present?
-    mail(from: "anonymous@example.com", to: ["voodoorai2000@gmail.com"], subject: "Documento Auditoría Ciudadana")
+    mail(from: "anonymous@example.com", to: ["voodoorai2000@gmail.com", "aranacm@madrid.es"], subject: "Documento Auditoría Ciudadana")
   end
 
   private
