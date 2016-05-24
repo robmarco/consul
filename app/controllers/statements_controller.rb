@@ -12,7 +12,7 @@ class StatementsController < ApplicationController
     @statement = @audit.statements.new(statement_params)
     if @statement.save
       Mailer.debt_audit_document(path, filename, title, body).deliver_later
-      redirect_to [@audit, @statement], notice: "Muchas gracias. Hemos recibido tu documento."
+      redirect_to "/citizen_audit_welcome", notice: "Muchas gracias. Hemos recibido tu documento."
     end
   end
 
