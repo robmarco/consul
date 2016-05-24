@@ -125,6 +125,12 @@ blockquote p {
   display: inline-block;
 }
 
+.field-attachment {
+  left: 96px;
+  position: absolute;
+  z-index: -1;
+}
+
 // 02. Header
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
