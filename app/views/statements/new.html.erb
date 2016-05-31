@@ -6,12 +6,24 @@
     <p><%= t("statements.new.text") %></p>
 
     <%= form_for [Audit.first, Statement.new] do |f| %>
-      <%= f.text_field :title, label: t("statements.new.label_title"), placeholder: t("statements.new.label_title") %>
-      <%= f.text_area :body, rows: 4, label: t("statements.new.label_message"), placeholder: t("statements.new.label_message") %>
+      <%= f.text_field :title,
+                       label: t("statements.new.label_title"),
+                       placeholder: t("statements.new.label_title") %>
+
+      <%= f.text_area :body,
+                       label: t("statements.new.label_message"),
+                       placeholder: t("statements.new.label_message"),
+                       rows: 4 %>
+
       <div class="relative">
-        <%= label_tag "audit-attachment", t("statements.new.attachment"), class: "button success" %>
-        <%= f.file_field(:attachment, id: "audit-attachment", label: false, class: "field-attachment") %>
+        <%= label_tag "audit-attachment",
+                      t("statements.new.attachment"),
+                      class: "button success" %>
+        <%= f.file_field :attachment,
+                         id: "audit-attachment",
+                         label: false, class: "field-attachment" %>
       </div>
+
       <div class="small-12 medium-6">
         <input type="submit" value="<%= t('statements.new.submit') %>" class="button expanded">
       </div>

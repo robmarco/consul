@@ -1,11 +1,4 @@
 FactoryGirl.define do
-  factory :statement do
-    audit_id 1
-    filename "MyString"
-  end
-  factory :audit do
-    name "MyString"
-  end
   sequence(:document_number) { |n| "#{n.to_s.rjust(8, '0')}X" }
 
   factory :user do
@@ -357,6 +350,15 @@ FactoryGirl.define do
   factory :ballot_line do
     ballot
     spending_proposal { FactoryGirl.build(:spending_proposal, feasible: true) }
+  end
+
+  factory :audit do
+    name "Madrid 2016"
+  end
+
+  factory :statement do
+    audit
+    filename "audit statement"
   end
 
 end
