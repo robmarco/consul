@@ -356,7 +356,7 @@ Proposal.only_hidden.flagged.reorder("RANDOM()").limit(5).each(&:confirm_hide)
 puts "Creating district Forums"
 forums = ["Fuencarral - El Pardo", "Moncloa - Aravaca", "Tetuán", "Chamberí", "Centro", "Latina", "Carabanchel", "Arganzuela", "Usera", "Villaverde", "Chamartin", "Salamanca", "Retiro", "Puente de Vallecas", "Villa de Vallecas", "Hortaleza", "Barajas", "Ciudad Lineal", "Moratalaz", "San Blas - Canillejas", "Vicálvaro"]
 forums.each_with_index do |forum, i|
-  user = create_user("user_for_forum#{i}@example.es")
+  user = create_user("user_for_forum#{i+1}@example.es")
   Forum.create(name: forum, user: user)
 end
 
@@ -401,5 +401,23 @@ puts "Open plenary proposal"
   puts "#{proposal.title}"
 end
 
+
 puts "Debt Audit"
 Audit.create!(name: "Madrid 2016")
+
+puts "Creating banners"
+Proposal.last(3).each do |proposal|
+  title = Faker::Lorem.sentence(word_count = 3)
+  description = Faker::Lorem.sentence(word_count = 12)
+  banner = Banner.create!(title: title,
+                          description: description,
+                          style: ["banner-style banner-style-one", "banner-style banner-style-two",
+                                  "banner-style banner-style-three"].sample,
+                          image: ["banner-img banner-img-one", "banner-img banner-img-two",
+                                  "banner-img banner-img-three"].sample,
+                          target_url: Rails.application.routes.url_helpers.proposal_path(proposal),
+                          post_started_at: rand((Time.now - 1.week) .. (Time.now - 1.day)),
+                          post_ended_at:   rand((Time.now  - 1.day) .. (Time.now + 1.week)),
+                          created_at: rand((Time.now - 1.week) .. Time.now))
+  puts "    #{banner.title}"
+end
