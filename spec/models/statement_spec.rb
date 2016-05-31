@@ -7,8 +7,8 @@ describe Statement do
     expect(statement).to be_valid
   end
 
-  it "should not be valid without an filename" do
-    statement.filename = nil
+  it "should not be valid without an attachment" do
+    statement.attachment = nil
     expect(statement).to_not be_valid
   end
 

@@ -5,7 +5,7 @@
     <h1><%= t("statements.new.title") %></h1>
     <p><%= t("statements.new.text") %></p>
 
-    <%= form_for [Audit.first, Statement.new] do |f| %>
+    <%= form_for [@audit, @statement] do |f| %>
       <%= f.text_field :title,
                        label: t("statements.new.label_title"),
                        placeholder: t("statements.new.label_title") %>

@@ -6,7 +6,6 @@ feature 'Statements' do
     create(:audit)
 
     visit "/"
-
     first(:link, "Open processes").click
     click_link "More information about Citizen Audit"
     first(:link, "Send information").click

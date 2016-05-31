@@ -358,7 +358,7 @@ FactoryGirl.define do
 
   factory :statement do
     audit
-    filename "audit statement"
+    attachment { File.new("#{Rails.root}/spec/support/attachments/citizen_audit.png") }
   end
 
 end
