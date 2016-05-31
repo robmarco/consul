@@ -1,5 +1,19 @@
 require 'rails_helper'
 
-RSpec.describe Statement, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Statement do
+  let(:statement) { build(:statement) }
+
+  it "should be valid" do
+    expect(statement).to be_valid
+  end
+
+  it "should not be valid without an filename" do
+    statement.filename = nil
+    expect(statement).to_not be_valid
+  end
+
+  it "should not be valid without an associated audit" do
+    statement.audit = nil
+    expect(statement).to_not be_valid
+  end
 end

@@ -1,5 +1,14 @@
 require 'rails_helper'
 
-RSpec.describe Audit, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Audit do
+  let(:audit) { build(:audit) }
+
+  it "should be valid" do
+    expect(audit).to be_valid
+  end
+
+  it "should not be valid without an name" do
+    audit.name = nil
+    expect(audit).to_not be_valid
+  end
 end
