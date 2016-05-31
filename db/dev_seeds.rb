@@ -400,3 +400,6 @@ puts "Open plenary proposal"
                               cached_votes_up: rand(1000))
   puts "#{proposal.title}"
 end
+
+puts "Debt Audit"
+Audit.create!(name: "Madrid 2016")
