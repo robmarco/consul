@@ -139,34 +139,35 @@ en:
       title_page: Participatory budgeting
   citizen_audit:
     welcome:
-      title: "AUDITORÍA CIUDADANA"
-      subtitle: "Auditoría Ciudadana Municipal de Deuda y Políticas Públicas del Ayuntamiento de Madrid"
-      step_1_html: "1 <span>Identificación de casos y recopilación de indicios</span>"
-      step_2_html: "2 <span>Análisis de la información y de impactos</span>"
-      step_3_html: "3 <span>Presentación de resultados y Consultas ciudadanas</span>"
-      send_information: "Enviar información"
-      send_information_text: "Si tienes conocimiento de alguna actuación municipal que haya podido generar impactos negativos sobre la ciudadanía no dudes en enviarnos la información."
-      more_info: "Más información sobre la auditoría ciudadana"
-      what_is: "¿Qué es la Auditoria Ciudadana del Ayuntamiento de Madrid?"
+      title: "CITIZEN AUDIT"
+      subtitle: "Municipal Citizen Debt Audit and Public Policy of the City of Madrid"
+      step_1_html: "1 <span>Identification of cases and evidence collection</span>"
+      step_2_html: "2 <span>Information analysis and impact</span>"
+      step_3_html: "3 <span>Presentation of results and public consultations</span>"
+      send_information: "Send information"
+      send_information_text: "If you know of any municipal action that may have generated negative impacts on citizenship please send information."
+      more_info: "More information about the citizen audit"
+      what_is: "What is the Citizen Audit of the City of Madrid?"
       what_is_text: |-
-        Es un proceso de identificación y análisis de aquellas políticas municipales que hayan podido tener un impacto negativo sobre la ciudadanía madrileña.
 
-        Estos impactos negativos no son solo de tipo económico (efectos sobre el nivel de endeudamiento, inversión, o empleo, por ejemplo), sino también de tipo social, medioambiental o de género. Estudiar las malas prácticas que han generado estos impactos negativos permitirá tomar medidas que impidan su repetición en el futuro.
+        It is a process of identification and analysis of those municipal policies that may have had a negative impact on Madrid's citizenship.
 
-        Además, la información obtenida permitirá a la ciudadanía mejorar su conocimiento sobre la gestión municipal, ampliando así su capacidad de decisión en este ámbito.
-      impact_title: "¿Qué tipo de impactos analiza la Auditoría?"
-      impact_text: "La auditoría que llevamos a cabo es integral porque analiza toda aquella intervención pública con indicios de haber generado impacto negativo en distintas dimensiones."
-      impact_1: Financiero
-      impact_2: Económico
+        These negative impacts are not only economic ( effects on the level of debt , investment, or employment, for example), but also social , environmental type or gender . Studying the bad practices that have generated these negative impacts will be allowed to take measures to prevent their recurrence in the future.
+
+        In addition , the information obtained will enable citizens to improve their knowledge of municipal management , expanding its decision-making capacity in this area.
+      impact_title: "What kind of impact does the Audit analyze?"
+      impact_text: "The audit we conduct is integral because it analyzes all evidence of negative impact on different dimensions that the public has generated."
+      impact_1: Financial
+      impact_2: Economic
       impact_3: Social
-      impact_4: Medioambiental
-      impact_5: De género
-      participatory_title: "¿Qué papel juega la participación ciudadana en la Auditoría?"
+      impact_4: Environmental
+      impact_5: Genre type
+      participatory_title: "What is the role of citizen participation in the audit ?"
       participatory_text: |-
-        La participación ciudadana es un pilar básico de la Auditoría. Se habilitarán mecanismos para que la participación pueda darse en los siguientes ámbitos:
+        Citizen participation is a cornerstone of the audit. Mechanisms for participation are enabled in the following fields:
 
-        - Identificación de casos de políticas municipales con posibles impactos negativos sobre la ciudadanía que deban ser sometidos a la Auditoría.
-        - Aportación de indicios de posibles impactos negativos, ya sean de tipo financiero, económico, social, medioambiental o de género.
-        - Participar en el proceso de análisis de impactos.
-        - Conocer los resultados parciales y finales de la Auditoría.
-        - Proponer y participar en consultas ciudadanas que se deriven de los resultados obtenidos por la Auditoría, tomando las decisiones finales sobre las actuaciones más relevantes a tomar como resultado de la Auditoría.
+        - Identification of cases of municipal policies with possible negative impacts on citizens.
+        - Providing evidence of possible negative impacts, whether financial, economic, social, environmental or gender type .
+        - Participate in the impact analysis process.
+        - Knowledge of the partial and final results of the audit.
+        - Propose and participate in public consultations arising from the results obtained by the Audit, taking the final decisions on the most relevant proceedings, as a result of the audit.
